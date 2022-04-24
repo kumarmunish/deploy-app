@@ -19,7 +19,7 @@ Note:
 
 - Clone the repo
 ```
-git clone 
+git clone https://github.com/kmunish/deploy-app.git
 ```
 * Navigate to project directtory
 * Run `terraform init`
