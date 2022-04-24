@@ -6,6 +6,15 @@ terraform {
       version = "~> 3.0"
     }
   }
+
+  backend "s3" {
+    region         = "ap-southeast-2"
+    bucket         = "tfstate-bucket"
+    key            = "sample-app.tfstate"
+    dynamodb_table = "terraform-locks"
+    role_arn       = ""
+  }
+
 }
 
 # Configure the AWS Provider
