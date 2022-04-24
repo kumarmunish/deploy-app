@@ -1,4 +1,4 @@
-# How to deploy testchallenge app on AWS ECS 
+# How to deploy Sample app on AWS ECS 
 
 ### To start, make sure you have the following dependencies installed and a working development environment:
 
