@@ -5,6 +5,7 @@ resource "aws_db_instance" "appdb" {
   engine                 = "postgres"
   engine_version         = "12.10"
   port                   = var.dbport
+  name                   = "app"
   username               = var.db_username
   password               = aws_ssm_parameter.db_password.value
   db_subnet_group_name   = aws_db_subnet_group.database.id

@@ -22,6 +22,7 @@ resource "aws_ecs_task_definition" "service_task" {
         { "name" : "VTT_DBHOST", "value" : "${aws_db_instance.appdb.address}" },
         { "name" : "VTT_DBPORT", "value" : "${tostring(var.dbport)}" },
         { "name" : "VTT_DBUSER", "value" : "${var.db_username}" },
+        { "name" : "VTT_DBNAME", "value" : "app" },
         { "name" : "VTT_LISTENHOST", "value" : "0.0.0.0" }
       ]
       cpu       = 256
@@ -54,6 +55,7 @@ resource "aws_ecs_task_definition" "updatedb_task" {
         { "name" : "VTT_DBHOST", "value" : "${aws_db_instance.appdb.address}" },
         { "name" : "VTT_DBPORT", "value" : "${tostring(var.dbport)}" },
         { "name" : "VTT_DBUSER", "value" : "${var.db_username}" },
+        { "name" : "VTT_DBNAME", "value" : "app" },
         { "name" : "VTT_LISTENHOST", "value" : "0.0.0.0" }
       ]
       cpu       = 256
