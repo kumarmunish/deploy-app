@@ -10,7 +10,7 @@ output "securitygroupid" {
 
 output "dns_name" {
   description = "alb dns to access the application"
-  value       = join("", ["http://", aws_alb.application_load_balancer.dns_name, ":3000/"])
+  value       = join("", ["http://", aws_alb.application_load_balancer.dns_name, ":80/"])
 }
 
 output "ecs_cluster_name" {
